@@ -41,7 +41,7 @@ async def main():
     config = load_config(".env.dist")
     db.create_table_users()
     storage = RedisStorage2() if config.tg_bot.use_redis else MemoryStorage()
-    bot = Bot(token=6283952882:AAFMZ5iNb5C_BVShZDO36IDNqCU9c-AQEnI.tg_bot.token, parse_mode='HTML')
+    bot = Bot(token=.tg_bot.token, parse_mode='HTML')
     dp = Dispatcher(bot, storage=storage)
 
     bot['config'] = config
